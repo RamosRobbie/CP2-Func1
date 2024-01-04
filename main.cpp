@@ -1,69 +1,39 @@
 #include <iostream>
 using namespace std;
 
+int MainMenu();
+int InputData();
+int Multiplication();
+int Division();
+int Addition();
+int Subtraction();
+
 int main()
 {
 	int val1, val2, options;
 	char continueChoice = 'y';
 
-	cout
-		<< "Choose [1] for Multiplication [2] Division [3] Addition [4] Subtraction:\n";
-	cin >> options;
-
-	system("cls");
-
 	do
 	{
 		do
 		{
+			options = MainMenu();
 			switch (options)
 			{
 			case 1:
-
-				cout << "Input value 1:";
-				cin >> val1;
-				cout << "Input value 2:";
-				cin >> val2;
-
-				system("cls");
-
-				cout << val1 << " * " << val2 << " = " << val1 * val2;
+				Multiplication();
 				break;
 
 			case 2:
-
-				cout << "Input value 1:";
-				cin >> val1;
-				cout << "Input value 2:";
-				cin >> val2;
-
-				system("cls");
-
-				cout << val1 << " / " << val2 << " = " << val1 / val2;
+				Division();
 				break;
 
 			case 3:
-
-				cout << "Input value 1:";
-				cin >> val1;
-				cout << "Input value 2:";
-				cin >> val2;
-
-				system("cls");
-
-				cout << val1 << " + " << val2 << " = " << val1 + val2;
+				Addition();
 				break;
 
 			case 4:
-
-				cout << "Input value 1:";
-				cin >> val1;
-				cout << "Input value 2:";
-				cin >> val2;
-
-				system("cls");
-
-				cout << val1 << " - " << val2 << " = " << val1 - val2;
+				Subtraction();
 				break;
 
 			default:
@@ -79,4 +49,78 @@ int main()
 		system("cls");
 	}
 	while (continueChoice == 'y');
+}
+
+int MainMenu()
+{
+	int options;
+
+	cout
+		<< "Choose [1] for Multiplication [2] Division [3] Addition [4] Subtraction:\n";
+	cin >> options;
+
+	system("cls");
+
+	return options;
+}
+
+int InputData()
+{
+	return 0;
+}
+
+int Multiplication()
+{
+	int val1, val2;
+
+	cout << "Input value 1 to multiply:";
+	cin >> val1;
+	cout << "Input value 2 to multiply:";
+	cin >> val2;
+
+	system("cls");
+
+	cout << val1 << " * " << val2 << " = " << val1 * val2 << "\n";
+}
+
+int Division()
+{
+	int val1, val2;
+
+	cout << "Input value 1 to divide:";
+	cin >> val1;
+	cout << "Input value 2 to divide:";
+	cin >> val2;
+
+	system("cls");
+
+	cout << val1 << " / " << val2 << " = " << val1 / val2 << "\n";
+}
+
+int Addition()
+{
+	int val1, val2;
+
+	cout << "Input value 1 to add:";
+	cin >> val1;
+	cout << "Input value 2 to add:";
+	cin >> val2;
+
+	system("cls");
+
+	cout << val1 << " + " << val2 << " = " << val1 + val2 << "\n";
+}
+
+int Subtraction()
+{
+	int val1, val2;
+
+	cout << "Input value 1 to subtract:";
+	cin >> val1;
+	cout << "Input value 2 to subtract:";
+	cin >> val2;
+
+	system("cls");
+
+	cout << val1 << " - " << val2 << " = " << val1 - val2 << "\n";
 }
